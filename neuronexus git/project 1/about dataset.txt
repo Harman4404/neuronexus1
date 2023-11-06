@@ -1,0 +1,19 @@
+Link='https://www.kaggle.com/datasets/yashpaloswal/ann-car-sales-price-prediction/data'
+About Dataset
+Main Context:-
+As a vehicle salesperson, you would like to create a model that can estimate the overall amount that consumers would spend given the following characteristics:
+customer name, customer email, country, gender, age, annual salary, credit card debt, and net worth
+
+The model should anticipate the following (Problem Statement):
+Amount Paid for a Car
+
+Task type:
+Regression
+
+Algorithm:
+The given problem statement can be solved using Machine Learning or Deep Learning Techniques
+
+Note:
+While reading csv you will face an error UnicodeDecodeError
+Just do the following step while reading csv file:-
+data = pd.read_csv("/kaggle/input/ann-car-sales-price-prediction/car_purchasing.csv",encoding='ISO-8859-1')
