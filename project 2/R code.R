@@ -1,7 +1,14 @@
-IRIS<-read.csv(file.choose(), header = T)
 df=read.csv(file.choose(), header = T)
 
-barplot(table(df$species), main = "Barplot of Species", xlab = "species", ylab = "no. of species", col = c("red","blue","green"))
+df$species[df$species=='Iris-setosa']<-0
+df$species[df$species=='Iris-versicolor']<-1
+df$species[df$species=='Iris-virginica']<-2
+df$species <- as.numeric(df$species)
+
+#To identify the no. of missing values 
+summary(df)
+
+#outlier analysis 
 boxplot(df$sepal_length,main="boxplot of sepal length")
 boxplot(df$sepal_width,main="boxplot of sepal width")
 boxplot(df$petal_length,main="boxplot of petal length")
